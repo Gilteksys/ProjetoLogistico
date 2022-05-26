@@ -1,0 +1,5 @@
+package com.projeto.log.logap.domain.model;
+
+public class StatusEntrega {
+
+}

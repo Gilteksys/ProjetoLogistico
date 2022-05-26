@@ -1,0 +1,6 @@
+package com.projeto.log.logap.domain.repository;
+
+public interface ClienteRepository {
+	
+
+}

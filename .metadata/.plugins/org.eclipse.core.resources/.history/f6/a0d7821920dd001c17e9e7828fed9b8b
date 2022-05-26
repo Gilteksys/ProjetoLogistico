@@ -1,0 +1,12 @@
+package com.projeto.log.logap.domain.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.projeto.log.logap.domain.model.Clientes;
+
+public interface ClienteRepository extends JpaRepository<Clientes, Long> {
+	
+	
+	
+
+}
