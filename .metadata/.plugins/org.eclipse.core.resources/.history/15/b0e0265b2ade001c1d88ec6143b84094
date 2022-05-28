@@ -1,0 +1,8 @@
+package com.projeto.log.logap.excepitionhandler;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice
+public class AppExcecoes {
+
+}
