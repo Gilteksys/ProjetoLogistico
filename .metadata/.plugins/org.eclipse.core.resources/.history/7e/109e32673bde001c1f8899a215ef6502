@@ -1,0 +1,30 @@
+package com.projeto.log.logap.domain.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.projeto.log.logap.domain.model.Clientes;
+import com.projeto.log.logap.domain.repository.ClienteRepository;
+
+import lombok.AllArgsConstructor;
+
+
+
+
+
+@AllArgsConstructor
+@Service
+public class CadastroClientesService {
+	
+	private ClienteRepository clienteRepository;
+	
+	@Transactional
+	public Clientes salvar(Clientes clientes) {
+		return clienteRepository.save(clientes);
+		
+	}
+	
+	
+	
+
+}

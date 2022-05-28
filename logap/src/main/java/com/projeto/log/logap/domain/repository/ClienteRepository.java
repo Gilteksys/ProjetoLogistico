@@ -1,6 +1,7 @@
 package com.projeto.log.logap.domain.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -14,5 +15,6 @@ public interface ClienteRepository extends JpaRepository<Clientes, Long> {
 
 	List<Clientes> findByNome(String nome);
 	List<Clientes> findByNomeContaining(String nome);
+	Optional<Clientes> findByEmail(String email);
 
 }
