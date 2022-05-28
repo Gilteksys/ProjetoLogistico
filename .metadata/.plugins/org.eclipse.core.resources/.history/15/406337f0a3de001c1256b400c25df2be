@@ -1,0 +1,28 @@
+package com.projeto.log.logap.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+import com.projeto.log.logap.domain.model.Entrega;
+import com.projeto.log.logap.domain.service.SolicitacaoDeEntregaService;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@ResponseStatus
+@RequestMapping("/entregas")
+public class EntregaController {´´
+	
+	private SolicitacaoDeEntregaService solicitacaoDeEntregaService;
+	
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	public Entrega solicitar(Entrega entrega) {
+		
+		return solicitacaoDeEntregaService.solicitar(entrega);
+		
+	}
+
+}

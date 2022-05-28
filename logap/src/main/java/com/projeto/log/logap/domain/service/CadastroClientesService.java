@@ -15,6 +15,11 @@ public class CadastroClientesService {
 	
 	private ClienteRepository clienteRepository;
 	
+	public Clientes busca(Long clienteId) {		
+		return clienteRepository.findById(clienteId)
+				.orElseThrow(() -> new Exceptions("Cliente não encontrado"));		
+	}
+	
 	@Transactional
 	public Clientes salvar(Clientes clientes) {
 		boolean emailEmUso = clienteRepository.findByEmail(clientes.getEmail())
@@ -22,10 +27,8 @@ public class CadastroClientesService {
 				.anyMatch(clienteExistente -> !clienteExistente.equals(clientes));
 		if (emailEmUso) {
 			throw new Exceptions("E-mail já cadastrado");
-		}
-		
-		return clienteRepository.save(clientes);
-		
+		}		
+		return clienteRepository.save(clientes);		
 	}
 	
 	public void excluir(Long clienteById) {
