@@ -1,6 +1,6 @@
 package com.projeto.log.logap.excepitionhandler;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +42,7 @@ public class AppExcecoes extends ResponseEntityExceptionHandler {
 		
 		Problemas problemas = new Problemas();
 		problemas.setStatus(status.value());
-		problemas.setDataHora(LocalDateTime.now());
+		problemas.setDataHora(OffsetDateTime.now());
 		problemas.setTitulo("Preencha todos os campos e tente novamente");
 		problemas.setCampos(campos);
 		
@@ -55,7 +55,7 @@ public class AppExcecoes extends ResponseEntityExceptionHandler {
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		Problemas problemas = new Problemas();
 		problemas.setStatus(status.value());
-		problemas.setDataHora(LocalDateTime.now());
+		problemas.setDataHora(OffsetDateTime.now());
 		problemas.setTitulo(ex.getMessage());
 				
 		return handleExceptionInternal(ex, problemas, new HttpHeaders(), status, request);
