@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.projeto.log.logap.domain.exception.EntidadeNaoEncontradaException;
 import com.projeto.log.logap.domain.exception.Exceptions;
 
 import lombok.AllArgsConstructor;
@@ -46,21 +47,30 @@ public class AppExcecoes extends ResponseEntityExceptionHandler {
 		problemas.setTitulo("Preencha todos os campos e tente novamente");
 		problemas.setCampos(campos);
 		
-		return handleExceptionInternal(ex,problemas, headers, status, request);
-			
+		return handleExceptionInternal(ex,problemas, headers, status, request);			
 	}
-	
-	@ExceptionHandler(Exceptions.class)
-	public ResponseEntity<Object> handleNegocio(Exceptions ex, WebRequest request){
-		HttpStatus status = HttpStatus.BAD_REQUEST;
+	@ExceptionHandler(EntidadeNaoEncontradaException.class)
+	public ResponseEntity<Object> handleEntidadeNaoEncontrada(EntidadeNaoEncontradaException ex, WebRequest request){
+		HttpStatus status = HttpStatus.NOT_FOUND;
+		
 		Problemas problemas = new Problemas();
 		problemas.setStatus(status.value());
 		problemas.setDataHora(OffsetDateTime.now());
 		problemas.setTitulo(ex.getMessage());
 				
-		return handleExceptionInternal(ex, problemas, new HttpHeaders(), status, request);
-		
+		return handleExceptionInternal(ex, problemas, new HttpHeaders(), status, request);		
 	}
 	
-
+	@ExceptionHandler(Exceptions.class)
+	public ResponseEntity<Object> handleNegocio(Exceptions ex, WebRequest request){
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		
+		Problemas problemas = new Problemas();
+		problemas.setStatus(status.value());
+		problemas.setDataHora(OffsetDateTime.now());
+		problemas.setTitulo(ex.getMessage());
+				
+		return handleExceptionInternal(ex, problemas, new HttpHeaders(), status, request);		
+	}
+	
 }
