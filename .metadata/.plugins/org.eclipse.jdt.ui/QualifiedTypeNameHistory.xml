@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.model.Clientes"/>
-    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.service.CadastroClientesService"/>
-    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonProperty"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonProperty.Access"/>
     <fullyQualifiedTypeName name="javax.validation.groups.ConvertGroup"/>
     <fullyQualifiedTypeName name="com.projeto.log.logap.domain.ValidationGroups"/>
@@ -29,35 +26,38 @@
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.repository.EntregaRepository"/>
-    <fullyQualifiedTypeName name="java.time.OffsetDateTime"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.NotBlank"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseStatus"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="javax.validation.Valid"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="com.projeto.log.logap.domain.service.RegistroOcorrenciaService"/>
     <fullyQualifiedTypeName name="com.projeto.log.logap.model.input.OcorrenciaInput"/>
-    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="org.modelmapper.ModelMapper"/>
     <fullyQualifiedTypeName name="com.projeto.log.logap.domain.model.Ocorrencia"/>
     <fullyQualifiedTypeName name="com.projeto.log.logap.assembler.OcorrenciaAssembler"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.exception.Exceptions"/>
     <fullyQualifiedTypeName name="com.projeto.log.logap.domain.exception.EntidadeNaoEncontradaException"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.service.BuscaEntregaService"/>
-    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.model.Entrega"/>
     <fullyQualifiedTypeName name="com.projeto.log.logap.model.OcorrenciaModel"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.service.BuscaEntregaService"/>
+    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.repository.EntregaRepository"/>
+    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.model.Entrega"/>
+    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.exception.Exceptions"/>
+    <fullyQualifiedTypeName name="java.time.OffsetDateTime"/>
+    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.model.StatusEntrega"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.projeto.log.logap.domain.service.FinalizacaoEntregaService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseStatus"/>
 </qualifiedTypeNameHistroy>
